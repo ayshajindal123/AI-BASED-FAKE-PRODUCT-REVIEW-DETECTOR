@@ -23,23 +23,49 @@ templates/index.html
 
 ## 📂 Project Structure  
 project-folder/
-│── app/
-│ ├── app.py # Flask backend API
-│ ├── static/ # CSS, JS, assets
-│ ├── templates/ # HTML templates
+AI-BASED-FAKE-PRODUCT-REVIEW-DETECTOR/
+│
+│── backend/
+│    ├── app.py
+│    ├── auth.py
+│    ├── scraper.py
+│    ├── predict.py
+│    ├── routes/
+│    │     ├── analyze_route.py
+│    │     ├── auth_route.py
+│    │
+│    ├── utils/
+│          ├── preprocessing.py
+│          ├── pdf_generator.py
+│
+│
+│── frontend/
+│    ├── templates/
+│    │     ├── index.html
+│    │     ├── login.html
+│    │     ├── result.html
+│    ├── static/
+│          ├── css/
+│          ├── js/
+│          ├── images/
+│
 │
 │── ml/
-│ ├── model.pkl # Trained ML model (if small)
-│ ├── vectorizer.pkl # TF-IDF or CountVectorizer
-│ ├── preprocessing.py
-│ ├── prediction.py
+│    ├── models/
+│    │     ├── model.pkl
+│    │     ├── vectorizer.pkl
+│    ├── training/
+│          ├── train_model.py
+│          ├── dataset.csv
+│
 │
 │── scripts/
-│ ├── scrape_reviews.py # (Optional) Review scraping script
-│ ├── pdf_generator.py
+│     ├── scrape_reviews.py
+│     ├── generate_pdf.py
 │
 │── requirements.txt
 │── README.md
+│── LICENSE
 │── .gitignore
 
 > **Note:** Large model files should be uploaded using GitHub Releases or Git LFS.
