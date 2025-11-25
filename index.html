@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FakeFind — Review Checker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<!-- Redirect to login if not logged in -->
+<script>
+if (!localStorage.getItem("loggedIn")) {
+    window.location.href = "login.html";
+}
+
+function logout() {
+    localStorage.removeItem("loggedIn");
+    window.location.href = "login.html";
+}
+</script>
+
+<nav class="navbar">
+  <div class="brand-left"><span class="brand">FakeFind</span></div>
+  <div class="nav-right">
+    <a class="nav-link" href="#">Home</a>
+    <a class="nav-link" href="#">About</a>
+    <a class="nav-link" href="#">FAQ</a>
+    <button onclick="logout()" class="btn primary">Logout</button>
+  </div>
+</nav>
+
+<header class="hero">
+  <h1>FakeFind Review Checker</h1>
+  <p class="subtitle">Scan Amazon & Flipkart reviews for manipulation, scams, or AI-generated content.</p>
+</header>
+
+<main class="container">
+
+  <!-- scan card -->
+  <section class="card scan-card">
+    <h2>Paste a product link to start your scan</h2>
+
+    <div class="scan-grid">
+      <input id="urlInput" type="url" placeholder="Paste product URL (Amazon / Flipkart)" />
+      <button id="analyzeBtn" class="btn primary" onclick="analyze()">Analyze</button>
+    </div>
+
+    <div class="platforms">
+      <button class="platform" onclick="selectPlatform('amazon')">Amazon</button>
+      <button class="platform" onclick="selectPlatform('flipkart')">Flipkart</button>
+    </div>
+
+    <p id="errorText" class="error"></p>
+  </section>
+
+  <!-- results -->
+  <section id="resultSection" class="card result-card hidden">
+    <div class="result-top">
+      <div class="product-meta" id="productMeta"></div>
+
+      <div class="score-area">
+        <div class="score-ring">
+          <svg viewBox="0 0 36 36" class="circular-chart">
+            <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+            <path id="scoreArc" class="circle" stroke-dasharray="0,100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"/>
+            <text id="scoreText" x="18" y="20.5" class="percentage">0%</text>
+          </svg>
+        </div>
+
+        <div class="verdict-block">
+          <div id="grade" class="grade-pill">—</div>
+          <div id="verdict" class="verdict-text">No analysis yet</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="insights">
+      <h3>Insights</h3>
+      <ul id="insightList"></ul>
+    </div>
+
+    <div class="reviews-list">
+      <h3>Sample Reviews</h3>
+      <div id="reviewList"></div>
+    </div>
+
+    <div class="result-actions">
+      <button id="downloadPdfBtn" class="btn accent">Download PDF</button>
+      <button id="newScanBtn" class="btn link" onclick="newScan()">New Scan</button>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">© FakeFind — Demo</footer>
+
+<script src="main.js"></script>
+
+</body>
+</html>

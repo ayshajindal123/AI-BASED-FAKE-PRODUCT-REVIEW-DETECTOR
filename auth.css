@@ -1,0 +1,86 @@
+
+/* Background */
+body {
+    margin: 0;
+    padding: 0;
+    background: #eef3ff;
+    font-family: Arial, sans-serif;
+}
+
+/* Center Box */
+.auth-page {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* White Card */
+.auth-box {
+    width: 420px;
+    background: #fff;
+    padding: 40px 35px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Title */
+.title {
+    margin-bottom: 25px;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+/* Inputs */
+.auth-box input {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+/* Password field eye */
+.password-wrapper {
+    position: relative;
+}
+
+.eye {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* Login Button */
+.login-btn {
+    width: 100%;
+    padding: 14px;
+    color: #fff;
+    background: #0066ff;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.login-btn:hover {
+    background: #004acc;
+}
+
+/* Bottom link */
+.switch {
+    margin-top: 15px;
+    font-size: 15px;
+}
+
+.switch a {
+    color: #0066ff;
+    font-weight: bold;
+    text-decoration: none;
+}
