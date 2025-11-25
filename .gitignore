@@ -1,0 +1,95 @@
+# -----------------------------
+# Python bytecode / cache files
+# -----------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+
+# -----------------------------
+# Virtual environments
+# -----------------------------
+venv/
+env/
+.venv/
+ENV/
+env.bak/
+
+# -----------------------------
+# Python package info
+# -----------------------------
+*.egg-info/
+dist/
+build/
+
+# -----------------------------
+# Flask / Web Server files
+# -----------------------------
+instance/
+*.log
+
+# -----------------------------
+# Jupyter Notebook checkpoints
+# -----------------------------
+.ipynb_checkpoints/
+
+# -----------------------------
+# Environment variables
+# -----------------------------
+.env
+.env.*
+*.key
+secrets.json
+
+# -----------------------------
+# Model & vectorizer files
+# (Keep only small models; large ones use Git LFS)
+# -----------------------------
+ml/models/*.pkl
+*.pkl
+*.h5
+*.pt
+*.joblib
+
+# -----------------------------
+# Dataset files
+# -----------------------------
+data/
+*.csv
+*.xlsx
+
+# -----------------------------
+# PDF / Generated reports
+# -----------------------------
+generated_reports/
+*.pdf
+
+# -----------------------------
+# OS-specific files
+# -----------------------------
+.DS_Store
+Thumbs.db
+
+# -----------------------------
+# IDE / Editor settings
+# -----------------------------
+.vscode/
+.idea/
+
+# -----------------------------
+# Node modules (if future frontend uses JS build tools)
+# -----------------------------
+node_modules/
+
+# -----------------------------
+# HTML build files
+# -----------------------------
+frontend/dist/
+frontend/build/
+
+# -----------------------------
+# Backup files
+# -----------------------------
+*.bak
+*.old
+*.orig
+
